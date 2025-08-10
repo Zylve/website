@@ -1,8 +1,5 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { animate, onScroll } from 'animejs';
-
 interface ScrollTitleProps {
     children: React.ReactNode;
 }

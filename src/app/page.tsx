@@ -11,24 +11,15 @@ export default function Home() {
         animate(".s-title", {
             scale: 0.5,
             x: "-75vw ",
+            ease: "inOut(3)",
             autoplay: onScroll({
-                container: "s-c",
-                enter: "25% 0%",
-                leave: "0% 0%",
-                sync: true,
+                container: "body",
+                enter: "60vh 0%",
+                leave: "20vh 0%",
+                sync: 1,
                 debug: true
-            })
+            }),
         })
-
-        animate(".s-title", {
-            y: "500vh",  // Scroll it out of view
-            autoplay: onScroll({
-                container: "s-c",
-                enter: "0% 0%",  // Start moving again after sticking from 50%-75%
-                leave: "300%",
-                sync: true
-            })
-        });
     }, []);
 
     return (
@@ -37,7 +28,7 @@ export default function Home() {
             <Nav />
 
             {/* Main Scrollable Content - uses default browser scrolling */}
-            <main className="px-4 lg:px-16 py-16 lg:py-24 lg:ml-64 s-c">
+            <main className="px-4 lg:px-16 py-16 lg:py-24 lg:ml-64">
                 {/* Content goes here - browser handles scrolling */}
                 <div className="h-[50vh] bg-red-500"></div>
 

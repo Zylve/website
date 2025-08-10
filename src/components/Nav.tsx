@@ -46,7 +46,7 @@ export default function Nav() {
     return (
         <nav
             ref={navRef}
-            className="fixed left-0 top-0 h-full w-[15vw] flex flex-col justify-start bg-zinc-900 p-8 pt-16 border-r border-zinc-800 z-50"
+            className="fixed left-0 top-0 h-full w-[15vw] flex flex-col justify-start bg-zinc-900 p-8 pt-16 border-r border-zinc-800 z-5"
         >
             <div className="space-y-8">
                 {/* Header */}
