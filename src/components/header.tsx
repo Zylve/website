@@ -1,23 +1,20 @@
 'use client';
 
 import { useEffect } from 'react';
-import { Protest_Guerrilla } from 'next/font/google';
-
-const protest_guerilla = Protest_Guerrilla({
-    variable: "--font-protest",
-    subsets: ["latin"],
-    weight: ["400"],
-});
+import { protest_guerilla } from '@/lib/font';
+import { animate, stagger, svg } from 'animejs';
 
 export default function Header() {
 
     useEffect(() => {
-        // Animation logic can be added here
+
     }, []);
 
     return (
         <div>
-            <h1 className={`text-6xl font-bold text-white ${protest_guerilla.className}`}>Vuk Tacic</h1>
+            <h1 className={`${protest_guerilla.className} text-6xl font-bold text-transparent`} style={{ WebkitTextStroke: '1px white' }}>
+                Vuk Tacic
+            </h1>
         </div>
     );
 }

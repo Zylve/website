@@ -2,6 +2,7 @@
 
 import Header from '@/components/header';
 import LandingContent from '@/components/content';
+import Train from '@/components/train';
 
 export default function Home() {
     return (
@@ -10,6 +11,11 @@ export default function Home() {
                 <Header />
                 <LandingContent />
             </div>
+            <Train />
+
+            <div className="h-[10vh] w-full bg-zinc-900"></div>
+
+            <div className="h-[200vh] w-full bg-zinc-900 next"></div>
         </div>
     );
 }
