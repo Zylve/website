@@ -1,61 +1,26 @@
 @import "tailwindcss";
 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-montserrat);
-    --font-protest: var(--font-protest-guerilla);
-
-    --color-sharp-red-50: #fef2f2;
-    --color-sharp-red-100: #fee2e2;
-    --color-sharp-red-200: #fecaca;
-    --color-sharp-red-300: #fca5a5;
-    --color-sharp-red-400: #f87171;
-    --color-sharp-red-500: #ff0000;
-    --color-sharp-red-600: #dc2626;
-    --color-sharp-red-700: #b91c1c;
-    --color-sharp-red-800: #991b1b;
-    --color-sharp-red-900: #7f1d1d;
-    --color-sharp-red-950: #450a0a;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
-/* Lenis smooth scrolling setup */
-html.lenis {
-    height: auto;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
-.lenis.lenis-smooth {
-    scroll-behavior: auto;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-}
-
-/* Hide scrollbar but keep functionality */
-.scrollable-content {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-}
-
-.scrollable-content::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
-
-/* Animation initial states */
-.nav-item {
-    opacity: 0;
-    transform: translateX(-30px);
-}
-
-.section-content h2,
-.section-content h3 {
-    opacity: 0;
-    transform: translateY(-20px);
-}
-
-.section-content p,
-.animate-text {
-    opacity: 0;
-    transform: translateY(10px);
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
 }
