@@ -7,7 +7,7 @@ const navItems = [
     { id: 'who', label: 'who', href: '#who' },
     { id: 'what', label: 'what', href: '#what' },
     { id: 'how', label: 'how', href: '#how' },
-    { id: 'why', label: 'why', href: '#why' },
+    { id: 'thoughts', label: 'thoughts', href: '#thoughts' },
     { id: 'contact', label: 'contact', href: '#contact' },
 ];
 
@@ -15,7 +15,6 @@ export default function Nav() {
     const navRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // Animate nav items on mount
         const timer = setTimeout(() => {
             animateNavItems('.nav-item');
         }, 300);
@@ -24,7 +23,6 @@ export default function Nav() {
     }, []);
 
     const handleNavClick = (href: string) => {
-        // Enhanced smooth scroll to section
         const element = document.querySelector(href);
         if (element) {
             element.scrollIntoView({ 

@@ -2,41 +2,64 @@
 
 import Nav from '@/components/Nav';
 import ScrollTitle from '@/components/ScrollTitle';
-import { animate, onScroll } from 'animejs';
-import { useEffect } from 'react';
 
 export default function Home() {
-
-    useEffect(() => {
-        animate(".s-title", {
-            scale: 0.5,
-            x: "-75vw ",
-            ease: "inOut(3)",
-            autoplay: onScroll({
-                container: "body",
-                enter: "60vh 0%",
-                leave: "20vh 0%",
-                sync: 1,
-                debug: true
-            }),
-        })
-    }, []);
-
     return (
         <div className="bg-zinc-900 min-h-screen">
-            {/* Fixed Navigation Overlay */}
             <Nav />
 
-            {/* Main Scrollable Content - uses default browser scrolling */}
             <main className="px-4 lg:px-16 py-16 lg:py-24 lg:ml-64">
-                {/* Content goes here - browser handles scrolling */}
                 <div className="h-[50vh] bg-red-500"></div>
 
-                <ScrollTitle>
-                    Hello
-                </ScrollTitle>
+                <section id="who">
+                    <ScrollTitle>
+                        who
+                    </ScrollTitle>
+                    <div className="h-[50vh] bg-blue-500">
+                        <div className="flex gap-8 h-full">
+                            {/* Grey content in top left corner */}
+                            <div className="flex-1 bg-zinc-700 m-6 h-[50%]">
+                            </div>
+                            
+                            {/* Grey box on the right */}
+                            <div className="flex-1 bg-zinc-700 m-6">
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                <div className="h-[300vh] bg-zinc-800"></div>
+                <section id="what">
+                    <ScrollTitle>
+                        what
+                    </ScrollTitle>
+                    <div className="h-auto bg-blue-500">
+                        <div className="bg-green-800 h-[40vh]"></div>
+                        <div className="bg-blue-950 h-[40vh]"></div>
+                        <div className="bg-zinc-800 h-[25vh]"></div>
+                        <div className="bg-zinc-700 h-[25vh]"></div>
+                    </div>
+                </section>
+
+                <section id="how">
+                    <ScrollTitle>
+                        how
+                    </ScrollTitle>
+                    <div className="h-[50vh] bg-blue-500"></div>
+                </section>
+
+                <section id="thoughts">
+                    <ScrollTitle>
+                        thoughts
+                    </ScrollTitle>
+                    <div className="h-[25vh] bg-blue-500"></div>
+                </section>
+
+                <section id="contact">
+                    <ScrollTitle>
+                        contact
+                    </ScrollTitle>
+                    <div className="h-[10vh] bg-blue-500"></div>
+                </section>
             </main>
         </div>
     );
