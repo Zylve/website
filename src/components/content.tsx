@@ -16,7 +16,7 @@ export default function LandingContent() {
                 <p>specialize in building physical things.</p>
             </div>
 
-            <div className="space-y-2 mb-[10rem]">
+            <div className="space-y-2 mb-[3rem]">
                 <div className={`text-2xl font-bold`}>
                     <p>currently:</p>
                 </div>
