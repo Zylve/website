@@ -1,12 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useLenis } from 'lenis/react';
+import { eases } from 'animejs';
 
 export default function LandingContent() {
-
-    useEffect(() => {
-        // Animation logic can be added here
-    }, []);
+    const lenis = useLenis();
 
     return (
 
@@ -27,14 +26,12 @@ export default function LandingContent() {
             </div>
 
             <div className="font-bold text-zinc-500">
-                <p 
+                <p
                     className="cursor-pointer hover:text-zinc-400 transition-colors"
-                    onClick={() => {
-                        const nextSection = document.querySelector('.next');
-                        if (nextSection) {
-                            nextSection.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }}
+                    onClick={() => lenis?.scrollTo(".next", {
+                        duration: 1,
+                        easing: (t) => 1 - Math.pow(1 - t, 5),
+                    })}
                 >
                     catch me on the other side.
                 </p>
