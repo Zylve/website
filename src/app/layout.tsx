@@ -16,7 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
         <html lang="en">
             <body
-                className={` ${montserrat.variable} antialiased bg-zinc-900 text-white min-h-screen font-sans`}
+                className={` ${montserrat.variable} antialiased bg-zinc-900 text-white min-h-screen font-sans overflow-x-hidden`}
             >
                 {children}
             </body>

@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <div>
-            <h1 className={`${protest_guerilla.className} text-6xl font-bold text-transparent`} style={{ WebkitTextStroke: '1px white' }}>
+            <h1 className={`${protest_guerilla.className} text-6xl font-bold text-transparent px-6 md:px-12 lg:px-24`} style={{ WebkitTextStroke: '1px white' }}>
                 Vuk Tacic
             </h1>
         </div>

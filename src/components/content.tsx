@@ -1,15 +1,13 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useLenis } from 'lenis/react';
-import { eases } from 'animejs';
 
 export default function LandingContent() {
     const lenis = useLenis();
 
     return (
 
-        <div className="space-y-6">
+        <div className="space-y-6 px-6 md:px-12 lg:px-24">
             <div className="space-y-2">
                 <p>twelfth grade student from vancouver, bc.</p>
                 <p>i do a lot of stuff.</p>
@@ -25,16 +23,19 @@ export default function LandingContent() {
                 <p>representing 27000 burnaby students on dsac</p>
             </div>
 
-            <div className="font-bold text-zinc-500">
-                <p
-                    className="cursor-pointer hover:text-zinc-400 transition-colors"
-                    onClick={() => lenis?.scrollTo(".next", {
-                        duration: 1,
-                        easing: (t) => 1 - Math.pow(1 - t, 5),
-                    })}
+            <div className="font-bold text-zinc-500 w-fit p-8 -m-4 hover:-rotate-2 hover:-translate-x-3 hover:-translate-y-3 transition-transform duration-300">
+                <div
+                    className="cursor-pointer hover:text-zinc-400 transition-colors flex items-center space-x-2"
+                    onClick={() => {
+                        lenis?.scrollTo("bottom", {
+                            duration: 2,
+                            easing: (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
+                        });
+                    }}
                 >
-                    catch me on the other side.
-                </p>
+                    <span>catch me on the other side.</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z" /></svg>
+                </div>
             </div>
         </div>
     );
