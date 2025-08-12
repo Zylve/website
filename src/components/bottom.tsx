@@ -17,7 +17,7 @@ export default function Bottom() {
                         <Icon src="/icons/github.svg" alt="GitHub" href="https://github.com/zylve" />
                         <Icon src="/icons/linkedin.svg" alt="LinkedIn" href="https://linkedin.com/in/vuktacic" />
                         <Icon src="/icons/instagram.svg" alt="Instagram" href="https://instagram.com/vuk.tc" />
-                        <Icon src="/icons/discord.svg" alt="Discord" href="https://discord.gg/zylve" />
+                        <Icon src="/icons/discord.svg" alt="Discord" href="https://discord.gg/nn5dp5fGPc" />
                         <Icon src="/icons/gmail.svg" alt="Gmail" href="mailto:vuk.tacic@gmail.com" />
                         <Icon src="/icons/hackclub.svg" alt="Hack Club" href="https://hackclub.slack.com/team/U06SYK3M62J" />
                     </div>
@@ -28,7 +28,7 @@ export default function Bottom() {
                             className="cursor-pointer hover:text-zinc-400 transition-colors flex items-center space-x-2"
                             onClick={() => {
                                 animate(svg.createDrawable(".line"), {
-                                    draw: "0 0",
+                                    draw: "1 1",
                                     ease: "inOutQuad",
                                     duration: 250,
                                     delay: stagger(2),

@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import { protest_guerilla } from '@/lib/font';
-import { animate, stagger, svg } from 'animejs';
 
 export default function Header() {
 

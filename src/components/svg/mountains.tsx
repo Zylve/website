@@ -6,6 +6,7 @@ import { useEffect } from "react";
 export default function Mountains() {
 
     useEffect(() => {
+        // we are reaching new levels of cooked code 🗣️🗣️🗣️🗣️
         animate(svg.createDrawable(".line"), {
             draw: "0 1",
             ease: "inOutQuad",
@@ -24,13 +25,12 @@ export default function Mountains() {
                 },
                 onLeaveBackward: () => {
                     animate(svg.createDrawable(".line"), {
-                        draw: "0 0",
+                        draw: "1 1",
                         ease: "inOutQuad",
                         duration: 250,
                         delay: stagger(2),
                     });
                 },
-
                 debug: false
             })
         });
