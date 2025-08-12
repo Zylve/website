@@ -23,7 +23,7 @@ export default function LandingContent() {
                 <p>representing 27000 burnaby students on dsac</p>
             </div>
 
-            <div className="font-bold text-zinc-500 w-fit p-8 -m-4 hover:-rotate-2 hover:-translate-x-3 hover:-translate-y-3 transition-transform duration-300">
+            <div className="font-bold text-zinc-500 w-fit p-8 -m-4 hover:-rotate-2 hover:-translate-x-2 hover:-translate-y-2 transition-transform duration-300">
                 <div
                     className="cursor-pointer hover:text-zinc-400 transition-colors flex items-center space-x-2"
                     onClick={() => {
