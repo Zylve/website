@@ -11,6 +11,12 @@ export default function Name() {
             ease: "inOutQuad",
             duration: 500,
             delay: stagger(3),
+            onBegin: () => {
+                animate(".name-container", {
+                    opacity: 1,
+                    duration: 0,
+                });
+            }
         });
 
         let back: JSAnimation;

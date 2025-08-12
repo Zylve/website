@@ -21,7 +21,7 @@ export default function Home() {
                 <div className="bg-zinc-900 min-h-screen">
                     <div className="h-[10vh] md:h-[25vh] w-full bg-zinc-900"></div>
                     <div className="flex flex-col items-center h-screen space-y-6">
-                        <div className="h-[4rem] w-[15rem]">
+                        <div className="h-[4rem] w-[15rem] opacity-0 name-container">
                             <Name />
                         </div>
                         <LandingContent />
