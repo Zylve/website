@@ -9,8 +9,8 @@ export default function Mountains() {
         animate(svg.createDrawable(".line"), {
             draw: "0 1",
             ease: "inOutQuad",
-            duration: 1000,
-            delay: stagger(5),
+            duration: 500,
+            delay: stagger(3),
             autoplay: onScroll({
                 container: "body",
                 enter: `${(100 * window.innerHeight) / 100}px 0%`,
@@ -18,16 +18,16 @@ export default function Mountains() {
                     animate(svg.createDrawable(".line"), {
                         draw: "0 1",
                         ease: "inOutQuad",
-                        duration: 1000,
-                        delay: stagger(5),
+                        duration: 500,
+                        delay: stagger(3),
                     });
                 },
                 onLeaveBackward: () => {
                     animate(svg.createDrawable(".line"), {
                         draw: "0 0",
                         ease: "inOutQuad",
-                        duration: 1000,
-                        delay: stagger(5),
+                        duration: 250,
+                        delay: stagger(2),
                     });
                 },
 

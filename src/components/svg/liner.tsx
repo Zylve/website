@@ -12,7 +12,7 @@ export default function Liner() {
                 container: "body",
                 enter: `${(70 * window.innerHeight) / 100}px 0%`,
                 leave: `${(40 * window.innerHeight) / 100}px 0%`,
-                sync: 0.25,
+                sync: 0.5,
                 debug: false
             }),
         });
