@@ -15,7 +15,7 @@ export default function Home() {
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                 syncTouch: true,
                 wheelMultiplier: 0.5,
-                touchMultiplier: 1,
+                touchMultiplier: 2,
             }}>
 
                 <div className="bg-zinc-900 min-h-screen">
