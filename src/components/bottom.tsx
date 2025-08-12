@@ -45,6 +45,18 @@ export default function Bottom() {
                             <div className="-scale-100"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z" /></svg></div>
                         </div>
                     </div>
+                    
+                    <div className="text-sm text-zinc-500 text-center mt-4">
+                        <span>Copyright © 2025 Vuk Tacic. </span>
+                        <a 
+                            href="https://github.com/zylve/website" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:text-zinc-400 transition-colors underline"
+                        >
+                            View repository
+                        </a>
+                    </div>
 
                     <Mountains />
                 </div>

@@ -18,16 +18,16 @@ export default function LandingContent() {
             easing: "outQuad",
             delay: stagger(100)
         });
-    });
+    }, []);
 
-    const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleMouseEnterSection = (e: React.MouseEvent<HTMLDivElement>) => {
         const img = e.currentTarget.querySelector('img') as HTMLImageElement;
         const text = e.currentTarget.querySelector('p') as HTMLParagraphElement;
 
         animate(img, {
             translateX: -3,
             duration: 300,
-            rotate: -12,
+            rotate: "-12deg",
             scale: 1.1,
             easing: 'inOutQuad'
         });
@@ -41,7 +41,7 @@ export default function LandingContent() {
         });
     };
 
-    const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleMouseLeaveSection = (e: React.MouseEvent<HTMLDivElement>) => {
         const img = e.currentTarget.querySelector('img') as HTMLImageElement;
         const text = e.currentTarget.querySelector('p') as HTMLParagraphElement;
 
@@ -68,6 +68,22 @@ export default function LandingContent() {
         });
     };
 
+    const handleMouseEnterIcon = (e: React.MouseEvent<HTMLDivElement>) => {
+        animate(e.currentTarget, {
+            rotate: "-372deg", // -1 turn - 12 deg
+            duration: 500,
+            easing: 'inOutQuad'
+        });
+    }
+
+    const handleMouseLeaveIcon = (e: React.MouseEvent<HTMLDivElement>) => {
+        animate(e.currentTarget, {
+            rotate: "-12deg",
+            duration: 500,
+            easing: 'inOutQuad'
+        });
+    }
+
     return (
         <>
             <div className="space-y-6 px-6 md:px-12 lg:px-24">
@@ -83,8 +99,8 @@ export default function LandingContent() {
                     </div>
                     <div
                         className="flex items-center space-x-3 cursor-pointer fade-text opacity-0"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                        onMouseEnter={handleMouseEnterSection}
+                        onMouseLeave={handleMouseLeaveSection}
                         onClick={() => window.open("https://bcydc.ca", "_blank", "noopener,noreferrer")}
                         onMouseDown={(e) => {
                             if (e.button === 1) {
@@ -92,13 +108,13 @@ export default function LandingContent() {
                             }
                         }}
                     >
-                        <Image src="/icons/bcydc.svg" alt="bcydc" width={28} height={28} />
+                        <Image src="/icons/bcydc.svg" alt="bcydc" width={28} height={28} loading="eager" onMouseOver={handleMouseEnterIcon} onMouseLeave={handleMouseLeaveIcon} />
                         <p className="no-underline">leading bcydc, the largest high school developer community in bc <br></br> & organizing the biggest youth hackathons in vancouver</p>
                     </div>
                     <div
                         className="flex items-center space-x-3 cursor-pointer fade-text opacity-0"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                        onMouseEnter={handleMouseEnterSection}
+                        onMouseLeave={handleMouseLeaveSection}
                         onClick={() => window.open("https://www.instagram.com/byrnerobotics", "_blank", "noopener,noreferrer")}
                         onMouseDown={(e) => {
                             if (e.button === 1) {
@@ -106,13 +122,13 @@ export default function LandingContent() {
                             }
                         }}
                     >
-                        <Image src="/icons/cr.svg" alt="robotics" width={28} height={28} />
-                        <p>captaining creekside robotics, the no. 2 first robotics team in bc</p>
+                        <Image src="/icons/cr.svg" alt="robotics" width={28} height={28} loading="eager" onMouseOver={handleMouseEnterIcon} onMouseLeave={handleMouseLeaveIcon} />
+                        <p>captaining creekside robotics, the no. 2 first robotics team in the province</p>
                     </div>
                     <div
                         className="flex items-center space-x-3 cursor-pointer fade-text opacity-0"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
+                        onMouseEnter={handleMouseEnterSection}
+                        onMouseLeave={handleMouseLeaveSection}
                         onClick={() => window.open("https://www.instagram.com/burnabydsac/", "_blank", "noopener,noreferrer")}
                         onMouseDown={(e) => {
                             if (e.button === 1) {
@@ -120,7 +136,7 @@ export default function LandingContent() {
                             }
                         }}
                     >
-                        <Image src="/icons/dsac.svg" alt="dsac" width={28} height={28} />
+                        <Image src="/icons/dsac.svg" alt="dsac" width={28} height={28} loading="eager" onMouseOver={handleMouseEnterIcon} onMouseLeave={handleMouseLeaveIcon} />
                         <p>representing 27000 burnaby students on dsac</p>
                     </div>
                 </div>
