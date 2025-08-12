@@ -86,6 +86,11 @@ export default function LandingContent() {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         onClick={() => window.open("https://bcydc.ca", "_blank", "noopener,noreferrer")}
+                        onMouseDown={(e) => {
+                            if (e.button === 1) {
+                                window.open("https://bcydc.ca", "_blank", "noopener,noreferrer");
+                            }
+                        }}
                     >
                         <Image src="/icons/bcydc.svg" alt="bcydc" width={28} height={28} />
                         <p className="no-underline">leading bcydc, the largest high school developer community in bc <br></br> & organizing the biggest youth hackathons in vancouver</p>
@@ -95,6 +100,11 @@ export default function LandingContent() {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         onClick={() => window.open("https://www.instagram.com/byrnerobotics", "_blank", "noopener,noreferrer")}
+                        onMouseDown={(e) => {
+                            if (e.button === 1) {
+                                window.open("https://www.instagram.com/byrnerobotics", "_blank", "noopener,noreferrer");
+                            }
+                        }}
                     >
                         <Image src="/icons/cr.svg" alt="robotics" width={28} height={28} />
                         <p>captaining creekside robotics, the no. 2 first robotics team in bc</p>
@@ -104,6 +114,11 @@ export default function LandingContent() {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         onClick={() => window.open("https://www.instagram.com/burnabydsac/", "_blank", "noopener,noreferrer")}
+                        onMouseDown={(e) => {
+                            if (e.button === 1) {
+                                window.open("https://www.instagram.com/burnabydsac/", "_blank", "noopener,noreferrer");
+                            }
+                        }}
                     >
                         <Image src="/icons/dsac.svg" alt="dsac" width={28} height={28} />
                         <p>representing 27000 burnaby students on dsac</p>
