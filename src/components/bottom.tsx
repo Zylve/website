@@ -5,9 +5,11 @@ import Mountains from './svg/mountains';
 import Liner from './svg/liner';
 import { useLenis } from 'lenis/react';
 import { animate, svg, stagger } from 'animejs';
+import { useState } from 'react';
 
 export default function Bottom() {
     const lenis = useLenis();
+    const [isScrolling, setIsScrolling] = useState(false);
 
     return (
         <div className="h-[85dvh] w-full bg-zinc-900 relative">
@@ -27,6 +29,9 @@ export default function Bottom() {
                         <div
                             className="cursor-pointer hover:text-zinc-400 transition-colors flex items-center space-x-2"
                             onClick={() => {
+                                if (isScrolling) return;
+                                
+                                setIsScrolling(true);
                                 animate(svg.createDrawable(".line"), {
                                     draw: "1 1",
                                     ease: "inOutQuad",
@@ -36,6 +41,9 @@ export default function Bottom() {
                                         lenis?.scrollTo("top", {
                                             duration: 2,
                                             easing: (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
+                                            onComplete: () => {
+                                                setIsScrolling(false);
+                                            }
                                         });
                                     }
                                 });

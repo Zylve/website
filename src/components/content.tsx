@@ -3,10 +3,11 @@
 import { useLenis } from 'lenis/react';
 import Image from 'next/image';
 import { animate, stagger, svg } from 'animejs';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function LandingContent() {
     const lenis = useLenis();
+    const [isScrolling, setIsScrolling] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -114,6 +115,9 @@ export default function LandingContent() {
                     <div
                         className="cursor-pointer hover:text-zinc-400 transition-colors flex items-center space-x-2 fade-text opacity-0"
                         onClick={() => {
+                            if (isScrolling) return;
+                            
+                            setIsScrolling(true);
                             animate(svg.createDrawable(".titleheader"), {
                                 draw: "0 0",
                                 ease: "inOutQuad",
@@ -123,6 +127,9 @@ export default function LandingContent() {
                                     lenis?.scrollTo("bottom", {
                                         duration: 2,
                                         easing: (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
+                                        onComplete: () => {
+                                            setIsScrolling(false);
+                                        }
                                     });
                                 }
                             });
