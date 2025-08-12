@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         images: [
             {
                 url: 'https://vuktacic.com/og.png', // Must be an absolute URL
-                width: 2048,
+                width: 2034,
                 height: 629,
             },
         ],
