@@ -2,36 +2,57 @@
 
 import { useLenis } from 'lenis/react';
 import Image from 'next/image';
-import { animate, JSAnimation } from 'animejs';
-import { useState } from 'react';
+import { animate } from 'animejs';
 
 export default function LandingContent() {
     const lenis = useLenis();
-
-    const [imgAnim, setImgAnim] = useState<JSAnimation | null>(null);
-    const [textAnim, setTextAnim] = useState<JSAnimation | null>(null);
 
     const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
         const img = e.currentTarget.querySelector('img') as HTMLImageElement;
         const text = e.currentTarget.querySelector('p') as HTMLParagraphElement;
 
-        setImgAnim(animate(img, {
+        animate(img, {
             translateX: -3,
             duration: 300,
             rotate: -12,
             scale: 1.1,
             easing: 'inOutQuad'
-        }));
-        setTextAnim(animate(text, {
+        });
+        animate(text, {
             translateX: 3,
             duration: 300,
-            easing: 'inOutQuad'
-        }));
+            easing: 'inOutQuad',
+            textDecoration: 'underline',
+            textDecorationColor: 'currentColor',
+            textDecorationThickness: '2px'
+        });
     };
 
-    const handleMouseLeave = () => {
-        imgAnim?.reverse();
-        textAnim?.reverse();
+    const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+        const img = e.currentTarget.querySelector('img') as HTMLImageElement;
+        const text = e.currentTarget.querySelector('p') as HTMLParagraphElement;
+
+        animate(img, {
+            translateX: 0,
+            duration: 300,
+            rotate: 0,
+            scale: 1,
+            easing: 'inOutQuad'
+        });
+
+        animate(text, {
+            translateX: 0,
+            duration: 300,
+            easing: 'inOutQuad',
+            textDecoration: 'none',
+            textDecorationColor: 'currentColor',
+            textDecorationThickness: '0px',
+            onComplete: () => {
+                animate(text, {
+                    textDecorationColor: 'transparent',
+                })
+            }
+        });
     };
 
     return (
@@ -51,14 +72,16 @@ export default function LandingContent() {
                     className="flex items-center space-x-3 cursor-pointer"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    onClick={() => window.open("https://bcydc.ca", "_blank", "noopener,noreferrer")}
                 >
                     <Image src="/icons/bcydc.svg" alt="bcydc" width={28} height={28} />
-                    <p>leading bcydc, the largest high school developer community in bc <br></br> & organizing the biggest youth hackathons in vancouver</p>
+                    <p className="no-underline">leading bcydc, the largest high school developer community in bc <br></br> & organizing the biggest youth hackathons in vancouver</p>
                 </div>
                 <div
                     className="flex items-center space-x-3 cursor-pointer"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    onClick={() => window.open("https://www.instagram.com/byrnerobotics", "_blank", "noopener,noreferrer")}
                 >
                     <Image src="/icons/cr.svg" alt="robotics" width={28} height={28} />
                     <p>captaining creekside robotics, the no. 2 first robotics team in bc</p>
@@ -67,6 +90,7 @@ export default function LandingContent() {
                     className="flex items-center space-x-3 cursor-pointer"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
+                    onClick={() => window.open("https://www.instagram.com/burnabydsac/", "_blank", "noopener,noreferrer")}
                 >
                     <Image src="/icons/dsac.svg" alt="dsac" width={28} height={28} />
                     <p>representing 27000 burnaby students on dsac</p>
