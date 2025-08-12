@@ -10,12 +10,26 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
     title: "Vuk Tacic",
+    keywords: ["Vuk", "Vuk Tacic", "Zylve", "Vancouver", "dsac", "bcydc", "creekside robotics", "7688", "creekside", "byrne creek", "burnaby"],
+    icons: {
+        icon: [
+          {
+            media: '(prefers-color-scheme: light)',
+            url: '/icons/icon-light.svg',
+            href: '/icons/icon-light.svg',
+          },
+          {
+            media: '(prefers-color-scheme: dark)',
+            url: '/icons/icon.svg',
+            href: '/icons/icon.svg',
+          },
+        ],
+      },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <>
-
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5XKY87YL8" />
             <Script id="google-analytics">{`
                 window.dataLayer = window.dataLayer || [];
