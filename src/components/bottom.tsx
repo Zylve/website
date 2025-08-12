@@ -1,8 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
 import Icon from './icon';
-import { animate, svg, onScroll, stagger } from 'animejs';
 import Mountains from './svg/mountains';
 import Liner from './svg/liner';
 
