@@ -21,6 +21,7 @@ export default function Icon({ src, alt, href = "#" }: IconProps) {
                 alt={alt} 
                 width={48}
                 height={48}
+                loading="eager"
                 className="filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-200" 
             />
         </a>
