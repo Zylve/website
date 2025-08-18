@@ -14,7 +14,7 @@ export default function Bottom() {
             <div className="w-full bg-zinc-900 px-6 md:px-12 lg:px-24">
                 <div className="flex flex-col items-center space-y-4">
                     <div className="flex items-center space-x-8">
-                        <Icon src="/icons/github.svg" alt="GitHub" href="https://github.com/zylve" />
+                        <Icon src="/icons/github.svg" alt="GitHub" href="https://github.com/vuktacic" />
                         <Icon src="/icons/linkedin.svg" alt="LinkedIn" href="https://linkedin.com/in/vuktacic" />
                         <Icon src="/icons/instagram.svg" alt="Instagram" href="https://instagram.com/vuk.tc" />
                         <Icon src="/icons/discord.svg" alt="Discord" href="https://discord.gg/nn5dp5fGPc" />
