@@ -49,7 +49,7 @@ export default function Bottom() {
                     <div className="text-sm text-zinc-500 text-center mt-4">
                         <span>Copyright © 2025 Vuk Tacic. </span>
                         <a 
-                            href="https://github.com/zylve/website" 
+                            href="https://github.com/vuktacic/website" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="hover:text-zinc-400 transition-colors underline"
