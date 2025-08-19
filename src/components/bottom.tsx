@@ -16,7 +16,7 @@ export default function Bottom() {
                     <div className="flex items-center space-x-8">
                         <Icon src="/icons/github.svg" alt="GitHub" href="https://github.com/vuktacic" />
                         <Icon src="/icons/linkedin.svg" alt="LinkedIn" href="https://linkedin.com/in/vuktacic" />
-                        <Icon src="/icons/instagram.svg" alt="Instagram" href="https://instagram.com/vuk.tc" />
+                        <Icon src="/icons/instagram.svg" alt="Instagram" href="https://instagram.com/vuktccic" />
                         <Icon src="/icons/discord.svg" alt="Discord" href="https://discord.gg/nn5dp5fGPc" />
                         <Icon src="/icons/gmail.svg" alt="Gmail" href="mailto:vuk.tacic@gmail.com" />
                         <Icon src="/icons/hackclub.svg" alt="Hack Club" href="https://hackclub.slack.com/team/U06SYK3M62J" />
